@@ -37,7 +37,7 @@ The procedure of submission is as following:
 3. Finish your work and write the report
 4. Commit your work, push to GitLab and then open a merge request to submit. The repository should contain
 	- *[Project directory]*
-	- *[Your student ID]*_assignment1_report.pdf (e.g. 102062563_assignment1_reprot.pdf)
+	- *[Team Member 1 ID]_[Team Member 2 ID]_assignment1_report.pdf (e.g. 102062563_103062528_assignment1_reprot.pdf)
 
     Note: Each team only need one submission.
 
