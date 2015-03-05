@@ -10,14 +10,14 @@ To complete this assignment, you need to
 4. Modify the RTE so that you can control the ratio between **SampleTxn** and **UpdateItemPriceTxn**. (You can now compare the performance difference between different read-only / read-write transaction ratio. For example, 40% **SampleTxn** and 60% **UpdateItemPriceTxn**)
 5. Run a few experiments and write a report
 
-### UpdateItemPriceTxn 
+## UpdateItemPriceTxn 
 In the assignment 1 project, the SchemaBuilder and TestbedLoader are already provided. If you try to `load()` the testbed, it will create an **item** table and populate 100000 items. You should implement a new transaction - **UpdateItemPriceTxn**, which will randomly select some items and update their price values. The detailed information of this transaction is described as following:
 
 - Randomly select 10 item ids
 - Randomly generate 10 new price values
 - For each selected item, update their `i_price` to the new price value
 
-### The report
+## The report
 - How you implement the transaction using JDBC and stored procedures briefly
 - Your experiement enviornment
 - The performance comparison between JDBC and stored procedures
