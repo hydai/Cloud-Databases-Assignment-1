@@ -24,7 +24,7 @@ In the assignment 1 project, the SchemaBuilder and TestbedLoader are already pro
 - The performance comparison under different ratio between **SampleTxn** and **UpdateItemPriceTxn**
 - Anything worth mentioning
 
-	Note: There is no strict limitation to the length of your report. Generally, a 2~3 pages report with some figures and tables is fine.
+	Note: There is no strict limitation to the length of your report. Generally, a 2~3 pages report with some figures and tables is fine. **Remember to include all the group members' student IDs in your report.**
 
 
 
@@ -38,6 +38,8 @@ The procedure of submission is as following:
 4. Commit your work, push to GitLab and then open a merge request to submit. The repository should contain
 	- *[Project directory]*
 	- *[Your student ID]*_assignment1_report.pdf (e.g. 102062563_assignment1_reprot.pdf)
+
+    Note: Each team only need one submission.
 
 ## Hints
 You can reference the [Introducing Benchmark Project](http://netdb-db.appspot.com/slides/tas/IV_Introducing_Benchmark_Project.pdf) on the [course website](http://netdb-db.appspot.com/). Also, you can reference the provided **SampleTxn** before implementing your own.
