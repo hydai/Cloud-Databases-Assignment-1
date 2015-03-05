@@ -23,11 +23,13 @@ public class StatisticMgr {
 	static {
 		String prop = System.getProperty(StatisticMgr.class.getName()
 				+ ".OUTPUT_DIR");
-		OUTPUT_DIR = (prop == null ? System.getProperty("user.home") : prop.trim());
+		OUTPUT_DIR = (prop == null ? System.getProperty("user.home") : prop
+				.trim());
 	}
 
 	/**
 	 * Record the input transaction result for further statistic calculation
+	 * 
 	 * @param trs
 	 */
 	public synchronized void processTxnResult(TxnResultSet trs) {
@@ -40,7 +42,8 @@ public class StatisticMgr {
 	}
 
 	/**
-	 * Calculate and print out the result into the result files from the recorded transaction results
+	 * Calculate and print out the result into the result files from the
+	 * recorded transaction results
 	 */
 	public synchronized void outputReport() {
 		HashMap<TransactionType, TxnStatistic> txnStatistics = new HashMap<TransactionType, TxnStatistic>();
@@ -49,7 +52,7 @@ public class StatisticMgr {
 
 		try {
 			File dir = new File(OUTPUT_DIR);
-			File outputFile = new File(dir, System.nanoTime() + ".txt");
+			File outputFile = new File(dir.getAbsoluteFile(), System.nanoTime() + ".txt");
 			FileWriter wrFile = new FileWriter(outputFile);
 			BufferedWriter bwrFile = new BufferedWriter(wrFile);
 
@@ -94,7 +97,8 @@ public class StatisticMgr {
 		}
 
 		if (logger.isLoggable(Level.INFO))
-			logger.info("Finnish creating tpcc benchmark report");
+			logger.info("Finnish creating tpcc benchmark report at '"
+					+ new File(OUTPUT_DIR).getAbsolutePath() + "'");
 	}
 
 	private static class TxnStatistic {
