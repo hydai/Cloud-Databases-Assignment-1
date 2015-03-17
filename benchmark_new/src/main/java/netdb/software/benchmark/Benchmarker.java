@@ -7,9 +7,10 @@ import java.util.logging.Logger;
 import netdb.software.benchmark.remote.SutConnection;
 import netdb.software.benchmark.remote.SutDriver;
 import netdb.software.benchmark.remote.vanilladb.VanillaDbDriver;
+import netdb.software.benchmark.rte.JdbcMixRte;
 import netdb.software.benchmark.rte.JdbcRte;
 import netdb.software.benchmark.rte.RemoteTerminalEmulator;
-import netdb.software.benchmark.rte.tpcc.SampleTxnRte;
+import netdb.software.benchmark.rte.tpcc.MixTxnRte;
 import netdb.software.benchmark.util.RandomValueGenerator;
 
 public class Benchmarker {
@@ -118,10 +119,9 @@ public class Benchmarker {
 		RemoteTerminalEmulator rte;
 
 		if(TestingParameters.IS_JDBC)
-			rte = new JdbcRte(args);
+			rte = new JdbcMixRte(args);
 		else
-			rte = new SampleTxnRte(args);
-		
+			rte = new MixTxnRte(args);
 		return rte;
 	}
 }

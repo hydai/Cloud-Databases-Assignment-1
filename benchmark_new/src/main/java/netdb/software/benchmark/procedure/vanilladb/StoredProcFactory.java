@@ -20,6 +20,9 @@ public class StoredProcFactory implements StoredProcedureFactory {
 		case SAMPLE_TXN:
 			sp = new SampleTxnProc();
 			break;
+		case UPDATE_TXN:
+			sp = new UpdateTxnProc();
+			break;
 		default:
 			throw new UnsupportedOperationException();
 		}
