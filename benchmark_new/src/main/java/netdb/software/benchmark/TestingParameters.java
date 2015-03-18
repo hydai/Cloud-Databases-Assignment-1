@@ -1,5 +1,6 @@
 package netdb.software.benchmark;
 
+
 public class TestingParameters {
 	public static final int SUT_VANILLA_DB = 1, SUT_VANILLA_DDDB = 2;
 
@@ -10,6 +11,8 @@ public class TestingParameters {
 
 	public static final boolean IS_JDBC;
 	public static final boolean IS_MICROBENCHMARK;
+	
+	public static final double UPDATE_PERCENTAGE;
 
 	static {
 		String prop = System.getProperty(TestingParameters.class.getName()
@@ -33,5 +36,9 @@ public class TestingParameters {
 		prop = System.getProperty(TestingParameters.class.getName()
 				+ ".IS_JDBC");
 		IS_JDBC = (prop == null) ? false : Boolean.parseBoolean(prop.trim());
+		
+		prop = System.getProperty(TestingParameters.class.getName()
+				+ ".UPDATE_PERCENTAGE");
+		UPDATE_PERCENTAGE = (prop == null ? 0 : Double.parseDouble(prop.trim()));
 	}
 }

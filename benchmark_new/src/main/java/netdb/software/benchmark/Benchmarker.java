@@ -9,7 +9,7 @@ import netdb.software.benchmark.remote.SutDriver;
 import netdb.software.benchmark.remote.vanilladb.VanillaDbDriver;
 import netdb.software.benchmark.rte.JdbcRte;
 import netdb.software.benchmark.rte.RemoteTerminalEmulator;
-import netdb.software.benchmark.rte.tpcc.SampleTxnRte;
+import netdb.software.benchmark.rte.SampleRte;
 import netdb.software.benchmark.util.RandomValueGenerator;
 
 public class Benchmarker {
@@ -120,7 +120,7 @@ public class Benchmarker {
 		if(TestingParameters.IS_JDBC)
 			rte = new JdbcRte(args);
 		else
-			rte = new SampleTxnRte(args);
+			rte = new SampleRte(args);
 		
 		return rte;
 	}

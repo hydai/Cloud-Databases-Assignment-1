@@ -7,7 +7,7 @@ import netdb.software.benchmark.TransactionType;
 import netdb.software.benchmark.util.RandomValueGenerator;
 
 public class SampleTxnParamGen implements TxParamGenerator {
-
+	
 	public SampleTxnParamGen() {
 
 	}
