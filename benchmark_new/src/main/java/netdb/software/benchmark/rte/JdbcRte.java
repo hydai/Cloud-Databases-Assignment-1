@@ -9,7 +9,7 @@ import netdb.software.benchmark.util.RandomValueGenerator;
 
 public class JdbcRte extends RemoteTerminalEmulator {
 
-	private RandomValueGenerator pg = new RandomValueGenerator();
+	private RandomValueGenerator rg = new RandomValueGenerator();
 	
 	public JdbcRte(Object... args) {
 		super(args);
@@ -20,7 +20,7 @@ public class JdbcRte extends RemoteTerminalEmulator {
 	
 		JdbcTxnExecutor txnExecutor = null;
 		
-		if (pg.nextDouble() > TestingParameters.UPDATE_PERCENTAGE)
+		if (rg.nextDouble() > TestingParameters.UPDATE_PERCENTAGE)
 			txnExecutor = new JdbcSampleTxnExecutor();
 		else
 			txnExecutor = new JdbcUpdateTimePriceTxnExecutor();

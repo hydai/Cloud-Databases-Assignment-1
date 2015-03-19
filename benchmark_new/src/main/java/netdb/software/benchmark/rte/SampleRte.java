@@ -10,7 +10,7 @@ import netdb.software.benchmark.util.RandomValueGenerator;
 
 public class SampleRte extends RemoteTerminalEmulator {
 
-	private RandomValueGenerator pg = new RandomValueGenerator();
+	private RandomValueGenerator rg = new RandomValueGenerator();
 	
 	
 	public SampleRte(Object[] connArgs) {
@@ -20,7 +20,7 @@ public class SampleRte extends RemoteTerminalEmulator {
 	@Override
 	protected TxnResultSet executeTxnCycle() {
 		TransactionExecutor tx = null;
-		if (pg.nextDouble() > TestingParameters.UPDATE_PERCENTAGE)
+		if (rg.nextDouble() > TestingParameters.UPDATE_PERCENTAGE)
 			tx = new SampleTxnExecutor(new SampleTxnParamGen());
 		else
 			tx = new SampleTxnExecutor(new UpdateItemPriceTxnParamGen());
